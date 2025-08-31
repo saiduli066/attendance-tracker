@@ -4,7 +4,7 @@
   "description": "Modern attendance tracking app",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1a2a6c",
+  "background_color": "#0d1427",
   "theme_color": "#0d1427",
   "orientation": "portrait-primary",
   "icons": [
