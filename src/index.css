@@ -2,6 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+
+
+/*   -------- */
+
+#splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: white;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.animated-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2563eb;
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #2563eb;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #2563eb;
+  }
+}
+
+/* -------- */
+
+
 @layer base {
   :root {
     --background: 222.2 84% 4.9%;

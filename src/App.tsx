@@ -11,17 +11,10 @@ import { NotificationHandler } from '@/components/NotificationHandler'
 import { useAttendanceStore } from '@/store/attendanceStore'
 import { Button } from '@/components/ui/button'
 import logo from './assets/calendar.png';
-import SplashScreen from './components/ui/SplashScreen'
 
 
 const App = () => {
   const { courses, setSelectedDate } = useAttendanceStore()
-  const [showSplash, setShowSplash] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowSplash(false), 2500);
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     // Set initial date to today
@@ -29,7 +22,7 @@ const App = () => {
   }, [setSelectedDate])
 
   return (
-    <>{showSplash ? <SplashScreen /> :
+    <>
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
         {/* Background Pattern */}
         <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)] pointer-events-none" />
@@ -148,7 +141,7 @@ const App = () => {
             },
           }}
         />
-      </div>}
+      </div>
     </>
   )
 }
