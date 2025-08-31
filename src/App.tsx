@@ -39,7 +39,7 @@ const  App=()=> {
               <img src={logo} alt="logo" className="h-9 md:h-[3.4rem] w-9 md:w-[3.4rem]"  />
             </div>
             <h1 className="text-3xl md:text-4xl font-bold text-white">
-              AttendanceTracker
+              A-Tendance
             </h1>
           </div>
           <p className="text-slate-400 text-lg">
